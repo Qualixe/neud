@@ -1,0 +1,140 @@
+/* navbar css start */
+.navbar {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 10px;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.navbar.nav-hidden {
+    transform: translateY(-100%);
+    transition: all 0.7s ease;
+}
+
+.navbar.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: ease .3s;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar.home-nav {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: ease .3s;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar-link-item {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--paragraph-text-color);
+    text-transform: uppercase;
+    position: relative;
+    line-height: 20px;
+}
+
+.navbar.home-nav .navbar-link-item {
+    color: var(--white);
+}
+
+.navbar-left .navbar-link-item {
+    padding-left: 10px;
+}
+
+.navbar-right .navbar-link-item {
+    padding-right: 10px;
+}
+
+.navbar-link-item::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    background: var(--paragraph-text-color);
+}
+
+.navbar.home-nav .navbar-link-item::before {
+    background: var(--white);
+}
+
+.navbar-left .navbar-link-item::before {
+    left: 0;
+}
+
+.navbar-right .navbar-link-item::before {
+    right: 0;
+}
+
+.navbar-link-item::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    transform: translateY(-50%);
+    right: 0;
+    width: 0;
+    height: 1px;
+    background: var(--paragraph-text-color);
+    transition: all ease .3s;
+}
+
+.navbar.home-nav .navbar-link-item::after {
+    background: var(--white);
+}
+
+
+.navbar-link-item:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+.navbar-logo {
+    width: 95px;
+}
+
+.navbar .logo-white {
+    display: none;
+}
+
+.navbar.home-nav .logo-black {
+    display: none;
+}
+
+.navbar.home-nav .logo-white {
+    display: block;
+}
+
+/* navbar css end */
+
+@media only screen and (max-width:575px) {
+
+    /* navbar css start */
+    .navbar {
+        height: 75px;
+    }
+
+    .navbar-logo {
+        width: 80px;
+    }
+
+    /* navbar css end */
+}

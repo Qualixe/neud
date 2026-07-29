@@ -1,0 +1,201 @@
+/* common css start */
+/* import fonts-- */
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/Arimo-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/Arimo-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/Arimo-SemiBold.woff') format('woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/Arimo-Bold.woff') format('woff');
+    font-weight: 700;
+}
+
+/* colors */
+:root {
+    /* color */
+    --black: #0B0802;
+    --white: #ffffff;
+    --heading-text-color: #0B0802;
+    --paragraph-text-color: #0B0802;
+    --body-color: #fff;
+    --card-bg: #dcdcdc;
+    --card-badge-bg: #0d4d0d;
+    /* font family */
+    --heading-font: "Arimo", serif;
+    --paragraph-font: "Arimo", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: var(--paragraph-font);
+    background-color: var(--body-color);
+    transition: all ease 2s;
+    -webkit-transition: all ease 2s;
+    -moz-transition: all ease 2s;
+    -ms-transition: all ease 2s;
+    -o-transition: all ease 2s;
+}
+
+body.active {
+    overflow: hidden;
+    transition: all ease 2s;
+    -webkit-transition: all ease 2s;
+    -moz-transition: all ease 2s;
+    -ms-transition: all ease 2s;
+    -o-transition: all ease 2s;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--paragraph-font);
+    transition: ease .3s;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    line-height: 1.2;
+    font-family: var(--heading-font);
+    color: var(--heading-text-color);
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--paragraph-text-color);
+    font-family: var(--paragraph-font);
+    margin: 0;
+    line-height: 22px;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* input css start */
+input,
+textarea,
+select {
+    color: var(--paragraph-text-color);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--paragraph-font);
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    /* Firefox */
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+    color: var(--text-muted);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.padding-top-0 {
+    padding-top: 0;
+}
+
+.padding-bottom-0 {
+    padding-bottom: 0;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    transition: ease .3s;
+}
+
+/* input css end */
