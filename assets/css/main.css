@@ -157,7 +157,7 @@ input,
 textarea,
 select {
     color: var(--paragraph-text-color);
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     font-family: var(--paragraph-font);
     outline: none;
@@ -167,13 +167,14 @@ select {
     appearance: none;
     -moz-appearance: textfield;
     -webkit-appearance: none;
-    /* Firefox */
+    line-height: 15px;
+    width: 100%;
 }
 
 input::placeholder,
 textarea::placeholder,
 select::placeholder {
-    color: var(--text-muted);
+    color: var(--paragraph-text-color);
 }
 
 input::-webkit-outer-spin-button,
@@ -207,7 +208,7 @@ button {
     border: 1px solid var(--btn-bg);
 }
 
-.btn:hover{
+.btn:hover {
     color: var(--btn-bg);
     background: var(--btn-color);
 }
