@@ -1,0 +1,87 @@
+/* img-text-section3 css start */
+.img-text-section3 {
+    padding: 80px 0 0;
+}
+
+.img-text-wrap3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.img-text-content3 {
+    max-width: 304px;
+    width: 100%;
+}
+
+.img-text-content3-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    margin-bottom: 12px;
+}
+
+.img-text-content3-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.img-text-content3-wrap p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.img-text-img3 {
+    max-width: 960px;
+    width: 100%;
+}
+
+/* img-text-section3 css end */
+
+@media only screen and (max-width: 992px) {
+
+    /* img-text-section3 css start */
+    .img-text-section3 {
+        padding: 40px 0 0;
+    }
+
+    .img-text-wrap3 {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    /* img-text-section3 css end */
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* img-text-section3 css start */
+    .img-text-wrap3 {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .img-text-content3 {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .img-text-content3-wrap {
+        gap: 20px;
+    }
+
+    .img-text-content3-wrap p:nth-child(3) {
+        margin: 0 auto;
+        letter-spacing: 0.3px;
+    }
+
+    .img-text-content3-wrap p:last-child {
+        max-width: 285px;
+        margin: 0 auto;
+    }
+
+    /* img-text-section3 css end */
+}
