@@ -3,6 +3,11 @@
     margin: 0 10px;
 }
 
+.collection-banner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 .banner-section .desktop-banner-img,
 .banner-section .mobile-banner-img {
     min-height: 400px;
