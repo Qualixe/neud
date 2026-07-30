@@ -44,6 +44,7 @@ $(document).ready(function () {
   // sticky-add-to-cart-section js end--
 });
 
+// navbar js start----
 let lastScroll = 0;
 
 window.addEventListener("load", handleScroll);
@@ -72,3 +73,4 @@ function handleScroll() {
 
   lastScroll = scrolling;
 }
+// navbar js end----
