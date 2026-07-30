@@ -33,7 +33,9 @@
     --paragraph-text-color: #0B0802;
     --body-color: #fff;
     --card-bg: #dcdcdc;
-    --card-badge-bg: #0d4d0d;
+    --btn-bg: #0B0802;
+    --btn-color: #fff;
+    --border-color: #EAEAEA;
     /* font family */
     --heading-font: "Arimo", serif;
     --paragraph-font: "Arimo", serif;
@@ -182,20 +184,32 @@ input::-webkit-inner-spin-button {
     /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-.padding-top-0 {
-    padding-top: 0;
-}
-
-.padding-bottom-0 {
-    padding-bottom: 0;
-}
-
 button {
     background-color: transparent;
     outline: none;
     cursor: pointer;
     border: none;
     transition: ease .3s;
+}
+
+.btn {
+    padding: 11px 30px;
+    color: var(--btn-color);
+    background: var(--btn-bg);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    transition: all ease .3s;
+    border: 1px solid var(--btn-bg);
+}
+
+.btn:hover{
+    color: var(--btn-bg);
+    background: var(--btn-color);
 }
 
 /* input css end */

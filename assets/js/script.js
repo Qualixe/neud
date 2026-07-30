@@ -44,6 +44,96 @@ $(document).ready(function () {
   // sticky-add-to-cart-section js end--
 });
 
+// accordion js start----
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".accordion-items").forEach((section) => {
+    const items = section.querySelectorAll(".accordion-item");
+
+    function openItem(item) {
+      const content = item.querySelector(".accordion-item-content");
+      item.classList.add("active");
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+
+    function closeItem(item) {
+      const content = item.querySelector(".accordion-item-content");
+      item.classList.remove("active");
+      content.style.maxHeight = null;
+    }
+
+    // ==========================
+    // DEFAULT OPEN
+    // ==========================
+
+    if (section.classList.contains("toggle-item") && items.length) {
+      openItem(items[0]);
+    } else if (section.classList.contains("all-item-open")) {
+      items.forEach(openItem);
+    } else if (section.classList.contains("first-item-open") && items.length) {
+      openItem(items[0]);
+    }
+
+    // Recalculate height after page fully loaded (fix refresh height cut issue)
+    window.addEventListener("load", () => {
+      items.forEach((item) => {
+        if (item.classList.contains("active")) {
+          const content = item.querySelector(".accordion-item-content");
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+
+    // Recalculate on resize
+    window.addEventListener("resize", () => {
+      items.forEach((item) => {
+        if (item.classList.contains("active")) {
+          const content = item.querySelector(".accordion-item-content");
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+
+    // ==========================
+    // CLICK
+    // ==========================
+
+    items.forEach((item) => {
+      const header = item.querySelector(".accordion-item-title-wrap");
+
+      header.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        // all-item-open mode
+        if (section.classList.contains("toggle-item")) {
+          if (isActive) {
+            closeItem(item);
+          } else {
+            openItem(item);
+          }
+          return;
+        }
+
+        if (section.classList.contains("all-item-open")) {
+          if (isActive) {
+            closeItem(item);
+          } else {
+            openItem(item);
+          }
+          return;
+        }
+
+        // single-open mode
+        items.forEach(closeItem);
+
+        if (!isActive) {
+          openItem(item);
+        }
+      });
+    });
+  });
+});
+// accordion js end----
+
 // navbar js start----
 let lastScroll = 0;
 
@@ -57,10 +147,8 @@ function handleScroll() {
 
   if (scrolling > 1) {
     navbar.classList.add("nav-fixed");
-    home_nav_active.classList.remove("home-nav");
   } else {
     navbar.classList.remove("nav-fixed", "nav-hidden");
-    home_nav_active.classList.add("home-nav");
   }
 
   if (scrolling > lastScroll && scrolling > 10) {
@@ -72,5 +160,11 @@ function handleScroll() {
   }
 
   lastScroll = scrolling;
+
+  if (scrolling > 1) {
+    home_nav_active.classList.remove("home-nav");
+  } else {
+    home_nav_active.classList.add("home-nav");
+  }
 }
 // navbar js end----
