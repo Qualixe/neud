@@ -44,6 +44,41 @@ $(document).ready(function () {
   // sticky-add-to-cart-section js end--
 });
 
+// navbar js start----
+let lastScroll = 0;
+
+window.addEventListener("load", handleScroll);
+window.addEventListener("scroll", handleScroll);
+
+function handleScroll() {
+  const scrolling = window.scrollY;
+  const navbar = document.querySelector(".navbar");
+  const home_nav_active = document.querySelector(".home-nav-active");
+
+  if (scrolling > 1) {
+    navbar.classList.add("nav-fixed");
+  } else {
+    navbar.classList.remove("nav-fixed", "nav-hidden");
+  }
+
+  if (scrolling > lastScroll && scrolling > 10) {
+    // scrolling down — hide header
+    navbar.classList.add("nav-hidden");
+  } else if (scrolling < lastScroll) {
+    // scrolling up — show header
+    navbar.classList.remove("nav-hidden");
+  }
+
+  lastScroll = scrolling;
+
+  if ((scrolling > 1) & navbar.classList.contains("home-nav-active")) {
+    home_nav_active.classList.remove("home-nav");
+  } else if ((scrolling < 1) & navbar.classList.contains("home-nav-active")) {
+    home_nav_active.classList.add("home-nav");
+  }
+}
+// navbar js end----
+
 // accordion js start----
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".accordion-items").forEach((section) => {
@@ -133,38 +168,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // accordion js end----
-
-// navbar js start----
-let lastScroll = 0;
-
-window.addEventListener("load", handleScroll);
-window.addEventListener("scroll", handleScroll);
-
-function handleScroll() {
-  const scrolling = window.scrollY;
-  const navbar = document.querySelector(".navbar");
-  const home_nav_active = document.querySelector(".home-nav-active");
-
-  if (scrolling > 1) {
-    navbar.classList.add("nav-fixed");
-  } else {
-    navbar.classList.remove("nav-fixed", "nav-hidden");
-  }
-
-  if (scrolling > lastScroll && scrolling > 10) {
-    // scrolling down — hide header
-    navbar.classList.add("nav-hidden");
-  } else if (scrolling < lastScroll) {
-    // scrolling up — show header
-    navbar.classList.remove("nav-hidden");
-  }
-
-  lastScroll = scrolling;
-
-  if (scrolling > 1) {
-    home_nav_active.classList.remove("home-nav");
-  } else {
-    home_nav_active.classList.add("home-nav");
-  }
-}
-// navbar js end----
