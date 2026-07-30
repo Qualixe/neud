@@ -35,7 +35,7 @@
 }
 
 .product-card .card-img .main-img {
-    transition: ease .5s;
+    transition: all ease-in-out 1s;
 }
 
 .product-card .card-img .main-img img {
@@ -43,7 +43,6 @@
 }
 
 .card_hover:hover .card-img .main-img {
-    transform: scale(0);
     opacity: 0;
     visibility: hidden;
 }
@@ -56,14 +55,12 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    transform: scale(1.2);
     opacity: 0;
     visibility: hidden;
-    transition: ease .5s;
+    transition: all ease-in-out 1s;
 }
 
 .card_hover:hover .card-img .hover-img {
-    transform: scale(1);
     opacity: 1;
     visibility: visible;
 }
@@ -121,4 +118,28 @@
     align-items: flex-start;
     opacity: 0.6;
 }
+
+.card-btn {
+    position: absolute;
+    z-index: 1;
+    bottom: 17px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all ease-in-out 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.product-card:hover .card-image-wrap .card-btn{
+    opacity: 1;
+    visibility: visible;
+}
+
 /* product-card css end */
