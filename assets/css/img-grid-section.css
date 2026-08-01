@@ -5,11 +5,16 @@
 
 .img-grid-wrap {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 14px;
-    max-width: 940px;
+    /* max-width: 940px; */
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+}
+
+.img-grid-item {
+    grid-column: span 2;
+    width: 100%;
 }
 
 /* img-grid-section css end */
@@ -20,5 +25,14 @@
     .img-grid-section {
         padding: 80px 0;
     }
+
+    .img-grid-wrap .blank {
+        display: none;
+    }
+
+    .img-grid-item {
+        grid-column: span 3;
+    }
+
     /* img-grid-section css end */
 }

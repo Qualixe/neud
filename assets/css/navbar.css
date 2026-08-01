@@ -1,14 +1,4 @@
 /* navbar css start */
-.header {
-    position: relative;
-    height: 90px;
-}
-
-.header.home-header {
-    position: unset;
-    height: auto;
-}
-
 .navbar {
     height: 90px;
     display: flex;
@@ -22,12 +12,7 @@
     position: relative;
 }
 
-.navbar.nav-hidden {
-    transform: translateY(-100%);
-    transition: all 0.7s ease;
-}
-
-.navbar.nav-fixed {
+.navbar.home-nav-active {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,17 +20,14 @@
     transition: ease .3s;
     width: 100%;
     z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    background: transparent;
 }
 
 .navbar.home-nav {
-    background: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: ease .3s;
-    width: 100%;
-    z-index: 999;
+    opacity: 1;
+    visibility: visible;
 }
 
 .navbar-links {
@@ -140,7 +122,6 @@
 @media only screen and (max-width:575px) {
 
     /* navbar css start */
-    .header,
     .navbar {
         height: 75px;
     }
