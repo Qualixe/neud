@@ -1,26 +1,4 @@
-$(document).ready(function () {
-  "use strict";
-  // cart-drawer js start---
-  $(".cart-drawer-open").click(function (event) {
-    event.stopPropagation();
-    $(".cart-drawer").addClass("active");
-    $(".cart-drawer-inner").addClass("active");
-  });
-
-  $(".cart-drawer-close-window-btn").click(function (event) {
-    event.stopPropagation();
-    $(".cart-drawer").removeClass("active");
-    $(".cart-drawer-inner").removeClass("active");
-  });
-
-  $(".cart-drawer-close-btn").click(function (event) {
-    event.stopPropagation();
-    $(".cart-drawer").removeClass("active");
-    $(".cart-drawer-inner").removeClass("active");
-  });
-  // cart-drawer js end---
-});
-
+"use strict";
 // navbar js start----
 let lastScroll = 0;
 
@@ -131,3 +109,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // accordion js end----
+
+// cart-drawer js start---
+const cartDrawer = document.querySelector(".cart-drawer");
+const cartDrawerInner = document.querySelector(".cart-drawer-inner");
+
+function openCartDrawer(event) {
+  event.stopPropagation();
+  cartDrawer?.classList.add("active");
+  cartDrawerInner?.classList.add("active");
+}
+
+function closeCartDrawer(event) {
+  event.stopPropagation();
+  cartDrawer?.classList.remove("active");
+  cartDrawerInner?.classList.remove("active");
+}
+
+document.querySelectorAll(".cart-drawer-open").forEach((btn) => {
+  btn.addEventListener("click", openCartDrawer);
+});
+
+document
+  .querySelectorAll(".cart-drawer-close-window-btn, .cart-drawer-close-btn")
+  .forEach((btn) => {
+    btn.addEventListener("click", closeCartDrawer);
+  });
+
+// cart-drawer js end---
