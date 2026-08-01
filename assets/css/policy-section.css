@@ -1,0 +1,76 @@
+/* policy-section css start */
+.policy-section {
+    padding: 32px 0 0 0;
+}
+
+.policy-wrap {
+    max-width: 675px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.policy-top,
+.policy-btm {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.policy-top .policy-item,
+.policy-btm .policy-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.policy-top .policy-item {
+    gap: 12px;
+}
+
+.policy-btm .policy-item {
+    gap: 16px;
+}
+
+.policy-item h1,
+.policy-item h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.policy-item p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.policy-item ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.policy-btm .policy-item ul li {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    color: var(--paragraph-text-color);
+    font-family: var(--paragraph-font);
+}
+
+/* policy-section css end */
+
+@media only screen and (max-width: 575px) {
+
+    /* policy-section css start */
+    .policy-wrap {
+        max-width: 100%;
+    }
+
+    .policy-wrap {
+        gap: 32px;
+    }
+
+    /* policy-section css end */
+}
