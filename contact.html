@@ -33,7 +33,7 @@
 			</div>
 			<div class="navbar-right">
 				<ul class="navbar-links">
-					<li><button class="navbar-link-item">cart</button></li>
+					<li><button class="navbar-link-item cart-drawer-open">cart</button></li>
 				</ul>
 			</div>
 		</nav>
@@ -77,6 +77,72 @@
 			</div>
 		</section>
 		<!-- contact-section end -->
+
+		<!-- cart-drawer start -->
+		<div class="cart-drawer blank">
+			<span class="cart-drawer-close-window-btn"></span>
+			<div class="cart-drawer-inner">
+				<div class="cart-drawer-top">
+					<p class="cart-drawer-title">cart <span>(1 item)</span></p>
+					<button class="cart-drawer-close-btn" type="button" aria-label="size chart drawer close"
+						title="cart-drawer-close-btn">
+						<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M9.85403 9.14653C9.90048 9.19298 9.93733 9.24813 9.96247 9.30883C9.98762 9.36953 10.0006 9.43458 10.0006 9.50028C10.0006 9.56598 9.98762 9.63103 9.96247 9.69173C9.93733 9.75242 9.90048 9.80757 9.85403 9.85403C9.80757 9.90048 9.75242 9.93733 9.69173 9.96247C9.63103 9.98762 9.56598 10.0006 9.50028 10.0006C9.43458 10.0006 9.36953 9.98762 9.30883 9.96247C9.24813 9.93733 9.19298 9.90048 9.14653 9.85403L5.00028 5.70715L0.854028 9.85403C0.760208 9.94785 0.63296 10.0006 0.500278 10.0006C0.367596 10.0006 0.240348 9.94785 0.146528 9.85403C0.0527077 9.76021 2.61548e-09 9.63296 0 9.50028C-2.61548e-09 9.3676 0.0527077 9.24035 0.146528 9.14653L4.2934 5.00028L0.146528 0.854028C0.0527077 0.760208 0 0.63296 0 0.500278C0 0.367596 0.0527077 0.240348 0.146528 0.146528C0.240348 0.0527077 0.367596 0 0.500278 0C0.63296 0 0.760208 0.0527077 0.854028 0.146528L5.00028 4.2934L9.14653 0.146528C9.24035 0.0527077 9.3676 -2.61548e-09 9.50028 0C9.63296 2.61548e-09 9.76021 0.0527077 9.85403 0.146528C9.94785 0.240348 10.0006 0.367596 10.0006 0.500278C10.0006 0.63296 9.94785 0.760208 9.85403 0.854028L5.70715 5.00028L9.85403 9.14653Z"
+								fill="#0B0802" />
+						</svg>
+					</button>
+				</div>
+				<div class="cart-drawer-content">
+					<div class="cart-drawer-items">
+						<div class="cart-drawer-item">
+							<div class="cart-drawer-item-img">
+								<img src="./assets/images/card-drawer-img1.jpg" alt="card-drawer-img1">
+							</div>
+							<div class="cart-drawer-item-content-wrap">
+								<div class="cart-drawer-item-content-inner">
+									<div class="cart-drawer-item-content">
+										<p class="cart-drawer-item-title">The night before</p>
+										<p class="cart-drawer-item-price">$72.00 USD</p>
+										<p class="cart-drawer-item-qty">Qty: 1</p>
+									</div>
+									<div class="cart-drawer-item-qty-btn-wrap">
+										<button class="cart-drawer-item-qty-btn">-</button>
+										<input type="text" class="cart-drawer-item-qty-input" value="1" readonly>
+										<button class="cart-drawer-item-qty-btn">+</button>
+									</div>
+								</div>
+								<div class="cart-drawer-item-remove-btn-wrap">
+									<button class="cart-drawer-item-remove-btn">
+										<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M11.375 2H0.375C0.275544 2 0.180161 2.03951 0.109835 2.10983C0.0395088 2.18016 0 2.27554 0 2.375C0 2.47446 0.0395088 2.56984 0.109835 2.64017C0.180161 2.71049 0.275544 2.75 0.375 2.75H1V11.875C1 12.1071 1.09219 12.3296 1.25628 12.4937C1.42038 12.6578 1.64294 12.75 1.875 12.75H9.875C10.1071 12.75 10.3296 12.6578 10.4937 12.4937C10.6578 12.3296 10.75 12.1071 10.75 11.875V2.75H11.375C11.4745 2.75 11.5698 2.71049 11.6402 2.64017C11.7105 2.56984 11.75 2.47446 11.75 2.375C11.75 2.27554 11.7105 2.18016 11.6402 2.10983C11.5698 2.03951 11.4745 2 11.375 2ZM10 11.875C10 11.9082 9.98683 11.9399 9.96339 11.9634C9.93995 11.9868 9.90815 12 9.875 12H1.875C1.84185 12 1.81005 11.9868 1.78661 11.9634C1.76317 11.9399 1.75 11.9082 1.75 11.875V2.75H10V11.875ZM3 0.375C3 0.275544 3.03951 0.180161 3.10984 0.109835C3.18016 0.0395088 3.27554 0 3.375 0H8.375C8.47446 0 8.56984 0.0395088 8.64017 0.109835C8.71049 0.180161 8.75 0.275544 8.75 0.375C8.75 0.474456 8.71049 0.569839 8.64017 0.640165C8.56984 0.710491 8.47446 0.75 8.375 0.75H3.375C3.27554 0.75 3.18016 0.710491 3.10984 0.640165C3.03951 0.569839 3 0.474456 3 0.375Z"
+												fill="black" />
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart-drawer-empty">
+					<div class="cart-drawer-empty-text">
+						<p>Your Cart Is Empty</p>
+						<a href="#!" class="btn">shop now</a>
+					</div>
+				</div>
+				<div class="cart-drawer-footer">
+					<div class="cart-drawer-total-wrap">
+						<p class="cart-drawer-total-title">total</p>
+						<p class="cart-drawer-total-price">$72.00 USD</p>
+					</div>
+					<div class="cart-drawer-checkout-btn-wrap">
+						<button class="btn">secure checkout</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- cart-drawer end -->
 	</main>
 
 	<!-- footer start -->
