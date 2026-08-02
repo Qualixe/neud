@@ -1,0 +1,136 @@
+/* img-card-section css start */
+.img-card-section {
+    padding: 80px 0 148px;
+}
+
+.img-card-section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-card-section-heading .title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.img-card-section-heading .text {
+    font-size: 12px;
+    line-height: 17px;
+    margin-top: 24px;
+}
+
+.img-card-grids {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    row-gap: 60px;
+}
+
+.icg2 {
+    grid-column: 3;
+}
+
+.icg3 {
+    grid-column: 4;
+}
+
+.icg4 {
+    grid-column: 5;
+}
+
+.icg5 {
+    grid-column: 2 / span 2;
+    grid-row: span 2;
+}
+
+.icg6 {
+    grid-column: 5;
+}
+
+.icg7 {
+    grid-column: 6;
+}
+
+.icg8 {
+    grid-column: 5 / span 2;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 49px;
+}
+
+.img-card-grid-img {
+    width: 100%;
+}
+
+.img-card-grid-content {
+    margin-top: 14px;
+}
+
+.img-card-grid-content p {
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.img-card-grid-cta .title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 21px;
+    margin-bottom: 16px;
+}
+
+.img-card-grid-cta .cta-btn {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 17px;
+    text-decoration: underline;
+    color: var(--black);
+}
+
+/* img-card-section css end */
+
+@media only screen and (max-width:992px) {
+
+    /* img-card-section css start */
+    .img-card-section-heading {
+        margin-bottom: 40px;
+    }
+
+    .img-card-grids {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+
+    .img-card-grid {
+        grid-column: auto / span 1 !important;
+    }
+
+    .img-card-grid.icg5 {
+        grid-column: auto / span 2 !important;
+    }
+
+    .img-card-grid.icg8 {
+        grid-column: auto / span 2 !important;
+        margin-bottom: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* img-card-section css end */
+}
+
+@media only screen and (max-width:575px) {
+
+    /* img-card-section css start */
+    .img-card-section {
+        padding: 48px 0;
+    }
+    /* img-card-section css end */
+}

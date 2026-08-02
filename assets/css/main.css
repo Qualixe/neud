@@ -24,6 +24,12 @@
     font-weight: 700;
 }
 
+@font-face {
+    font-family: 'Skribblugh';
+    src: url('../fonts/SkribblughRegular.woff') format('woff');
+    font-weight: 400;
+}
+
 /* colors */
 :root {
     /* color */
@@ -36,9 +42,11 @@
     --btn-bg: #0B0802;
     --btn-color: #fff;
     --border-color: #EAEAEA;
+    
     /* font family */
     --heading-font: "Arimo", serif;
     --paragraph-font: "Arimo", serif;
+    --stylash-font: "Skribblugh", serif;
 }
 
 * {
